@@ -1,0 +1,6 @@
+node_modules
+build
+README2.md
+.vscode
+.idea
+package-lock.json
