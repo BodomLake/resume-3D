@@ -329,7 +329,7 @@ Ammo().then((Ammo) => {
     rigidBodies.push(ball);
   }
 
-  //create link boxes
+  //create link boxes 创建带可跳转链接的方块
   function createBox(
     x,
     y,
@@ -346,7 +346,7 @@ Ammo().then((Ammo) => {
     let quat = { x: 0, y: 0, z: 0, w: 1 };
     let mass = 0; //mass of zero = infinite mass
 
-    //load link logo
+    //load link logo 加载logo的纹理
     const loader = new THREE.TextureLoader(manager);
     const texture = loader.load(boxTexture);
     texture.magFilter = THREE.LinearFilter;
@@ -459,7 +459,7 @@ Ammo().then((Ammo) => {
     // 加载字体
     var text_loader = new THREE.FontLoader();
 
-    text_loader.load("./src/jsm/STZhongsong_Regular.json", function (font) {
+    text_loader.load("./src/jsm/FZYaoTi_Regular.json", function (font) {
 			var xMid, text;
 
 			var color = 0x00ff08;
@@ -1030,6 +1030,7 @@ Ammo().then((Ammo) => {
     createGridPlane();
     createBall();
 
+    //  在平面上创建4堵墙
     createWallX(87.5, 1.75, 0);
     createWallX(-87.5, 1.75, 0);
     createWallZ(0, 1.75, 87.5);
@@ -1162,7 +1163,7 @@ Ammo().then((Ammo) => {
     floatingLabel(19.125, 4.5, -70, 'LinkedIn');
     floatingLabel(26.875, 4.5, -70, 'Email');
     // floatingLabel(35, 6.5, -70, '  Static \nWebsite');
-    floatingLabel(35, 6.5, -70, '   How I \nmade this');
+    floatingLabel(35, 6.5, -70, '   我是怎么做的');
     // floatingLabel(44, 6.5, -70, '   How I \nmade this');
 
     allSkillsSection(-50, 0.025, 20, 40, 40, boxTexture.allSkills);
@@ -1187,17 +1188,17 @@ Ammo().then((Ammo) => {
     } else {
       // PC端
 			// Click on boxes with \nthe mouse to open links
-			touchText = "用鼠标点击球打开链接";
+			touchText = "用鼠标点击方块打开链接";
 			instructionsText = "使用键盘上的方向键移动球"
 				// "Use the arrow keys on your \n keyboard to move the ball.";
 		}
 
-    simpleText(9, 0.01, 5, instructionsText, 1.25);
+    simpleText(9, 0.01, 5, instructionsText, 1.5);
 
     simpleText(23, 0.01, -60, touchText, 1.5);
-    simpleText(-50, 0.01, -5, 'SKILLS', 3);
-    simpleText(-42, 0.01, -30, 'EXPERIENCE', 3);
-    simpleText(61, 0.01, -15, 'TIMELINE', 3);
+    simpleText(-50, 0.01, -5, '掌握技能', 3);
+    simpleText(-42, 0.01, -30, '实战项目', 3);
+    simpleText(61, 0.01, -15, '就职公司', 3);
 
     wallOfBricks();
     createTriangle(63, -55);
