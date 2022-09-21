@@ -82,18 +82,22 @@ export function getCanvasRelativePosition(event) {
 
 export function launchClickPosition(event) {
   const pos = getCanvasRelativePosition(event);
+  // 从Canvas获取到的点的3D坐标
   pickPosition.x = (pos.x / renderer.domElement.width) * 2 - 1;
-  pickPosition.y = (pos.y / renderer.domElement.height) * -2 + 1; // note we flip Y
+  pickPosition.y = (pos.y / renderer.domElement.height) * -2 + 1; // note we flip Y （翻转了Y轴）
 
-  // cast a ray through the frustum
+  // cast a ray through the frustum 
+  // 用ThreeJS的射线照射ThreeJS的几何体，判断是否有截断的ThreeJS物体
   const myRaycaster = new THREE.Raycaster();
+  // 射线起点定在相机的位置
   myRaycaster.setFromCamera(pickPosition, camera);
   // get the list of objects the ray intersected
   const intersectedObjects = myRaycaster.intersectObjects(scene.children);
   if (intersectedObjects.length) {
-    // pick the first object. It's the closest one
+    // pick the first object. It's the closest one 就拿第一个吧，不考虑被遮住的几何体
     const pickedObject = intersectedObjects[0].object;
     if (intersectedObjects[0].object.userData.URL)
+      // 在新窗口打开自定义数据的超链接
       window.open(intersectedObjects[0].object.userData.URL);
     else {
       return;
@@ -101,6 +105,7 @@ export function launchClickPosition(event) {
   }
 }
 
+// 设置被鼠标指住的物体的悬浮cursor样式
 export function launchHover(event) {
   event.preventDefault();
   var mouse = new THREE.Vector2();
