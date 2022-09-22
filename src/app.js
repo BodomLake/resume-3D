@@ -621,7 +621,7 @@ Ammo().then((Ammo) => {
 		cursorHoverObjects.push(billboardSign);
 	}
 
-	//create vertical billboard
+	//create vertical billboard 翻转了板子，竖起来
 	function createBillboardRotated(
 		x,
 		y,
@@ -1107,8 +1107,8 @@ Ammo().then((Ammo) => {
 		//   4,
 		//   4,
 		//   1,
-		//   boxTexture.twitter,
-		//   URL.twitter,
+		//   boxTexture.weibo,
+		//   URL.weibo,
 		//   0xffffff,
 		//   true
 		// );
@@ -1120,8 +1120,8 @@ Ammo().then((Ammo) => {
 			4,
 			4,
 			1,
-			boxTexture.LinkedIn,
-			URL.LinkedIn,
+			boxTexture.cnBlog,
+			URL.cnBlog,
 			0x0077b5,
 			true
 		);
@@ -1177,7 +1177,7 @@ Ammo().then((Ammo) => {
 			false
 		);
 
-		// floatingLabel(3.875, 4.5, -70, 'Twitter');
+		// floatingLabel(3.875, 4.5, -70, 'weibo');
 		floatingLabel(11.875, 4.5, -70, "Github");
 		floatingLabel(19.125, 4.5, -70, "cnBlogs");
 		floatingLabel(26.875, 4.5, -70, "Email");
@@ -1187,8 +1187,8 @@ Ammo().then((Ammo) => {
 
 		allSkillsSection(-50, 0.025, 20, 40, 40, boxTexture.allSkills);
 		allSkillsSection(61, 0.025, 13, 30, 60, inputText.activities);
-		allSkillsSection(8.5, 0.025, 54, 7, 3.5, boxTexture.skrillex);
-		allSkillsSection(9, 0.01, 45, 15, 15, boxTexture.edmText);
+		// allSkillsSection(8.5, 0.025, 54, 7, 3.5, boxTexture.skrillex);
+		// allSkillsSection(9, 0.01, 45, 15, 15, boxTexture.edmText);
 		// allSkillsSection(9, 0.01, 20, 21, 10.5, inputText.staticPortfolio);
 
 		//lensflare
