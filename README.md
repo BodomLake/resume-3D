@@ -34,8 +34,14 @@ While exploring [Google Experiments](https://experiments.withgoogle.com/) I disc
 To use locally, clone the repository, install dependencies, run using webpack's dev server, and navigate to localhost:8080 in your browser:
 
 ```javascript
-npm i
+安装依赖 
+npm install
+webpack-dev-server热更新开发
 npm run dev
+webpack 打包
+npm run build
+express 输出静态资源 
+npm run serve
 ```
 
 ## License
