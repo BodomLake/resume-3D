@@ -1201,7 +1201,7 @@ Ammo().then((Ammo) => {
 		//  移动端
 		if (isTouchscreenDevice()) {
 			// Touch boxes with your \nfinger to open links
-			touchText = "用你的手指移动球体打开链接";
+			touchText = "用你的手指触碰方块打开链接";
 			instructionsText = "使用屏幕底部或者左侧的操纵杆来移动球";
 			// ("   Use the joystick in the bottom \nleft of the screen to move the ball.");
 		} else {
