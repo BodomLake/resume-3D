@@ -1031,7 +1031,7 @@ Ammo().then((Ammo) => {
 
 	if (isTouchscreenDevice()) {
 		document.getElementById("appDirections").innerHTML =
-			"Use the joystick in the bottom left to move the ball. Please use your device in portrait orientation!";
+			"请用左下方的操作杆来移动小球，请竖立使用设备!";
 		createJoystick(document.getElementById("joystick-wrapper"));
 		document.getElementById("joystick-wrapper").style.visibility = "visible";
 		document.getElementById("joystick").style.visibility = "visible";
