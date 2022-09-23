@@ -1,5 +1,5 @@
 node_modules
-build
+# build
 README2.md
 .vscode
 .idea
