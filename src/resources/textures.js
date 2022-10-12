@@ -40,7 +40,7 @@ let woodTexture = "../src/jsm/woodTexture.jpg";
 //text
 let inputText = {};
 inputText.terpSolutionsText = "../src/jsm/terp-solutions-text.png";
-inputText.activities = "../src/jsm/activities_text.png";
+inputText.activities = "../src/jsm/career.png";
 inputText.bagholderBetsText = "../src/jsm/bagholderbets-text.png";
 inputText.homeSweetHomeText = "../src/jsm/home-sweet-home-text.png";
 inputText.staticPortfolio = "../src/jsm/static-portfolio.png";
@@ -68,7 +68,7 @@ URL.email = "https://792294021@qq.com";
 
 URL.githubBagholder =
   "https://baijiahao.baidu.com/s?id=1740409748077610412&wfr=spider&for=pc";
-  
+
 URL.githubHomeSweetHome = "https://www.bjdp2p.cn";
 
 https: URL.devTo = "https://www.cnblogs.com/noxus/p/16718877.html";
