@@ -452,7 +452,7 @@ Ammo().then((Ammo) => {
 		addRigidPhysics(linkBox, boxScale);
 	}
 
-	//loads text for Ryan Floyd Mesh
+	//loads text for Text Mesh
 	function loadAuthorText(char) {
 		var text_loader = new THREE.FontLoader();
 
@@ -922,6 +922,7 @@ Ammo().then((Ammo) => {
 		const elapsedTime = galaxyClock.getElapsedTime() + 150;
 
 		let deltaTime = clock.getDelta();
+		// 不是移动设备
 		if (!isTouchscreenDevice())
 			if (document.hasFocus()) {
 				moveBall();
@@ -935,8 +936,9 @@ Ammo().then((Ammo) => {
 			moveBall();
 		}
 
+		// 跟进物理世界
 		updatePhysics(deltaTime);
-
+		// 让所有的粒子运动起来
 		moveParticles();
 
 		renderer.render(scene, camera);
@@ -1133,7 +1135,7 @@ Ammo().then((Ammo) => {
 		//   4,
 		//   1,
 		//   boxTexture.globe,
-		//   URL.ryanfloyd,
+		//   URL.nouxs,
 		//   0xffffff,
 		//   false
 		// );

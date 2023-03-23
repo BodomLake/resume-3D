@@ -9,11 +9,11 @@ void main()
 
     // Diffuse point
     /*
-    float strength = distance(gl_PointCoord, vec2(0.5));
-    strength *= 2.0;
-    strength = 1.0 - strength;*/
+        float strength = distance(gl_PointCoord, vec2(0.5));
+        strength *= 2.0;
+        strength = 1.0 - strength;
+    */
 
-     // Light point
     // Light point
     // 距离 0.5（中心点） 越远，alpha值就越小，也就是说不明亮
     float strength = distance(gl_PointCoord, vec2(0.5));

@@ -52,7 +52,7 @@ SVG.reactLogo = "../src/jsm/react-svg.svg";
 //URLs
 let URL = {};
 URL.terpsolutions = "https://yunpiaow.com/";
-URL.ryanfloyd = "https://home.cnblogs.com/u/noxus";
+URL.nouxs = "https://home.cnblogs.com/u/noxus";
 
 URL.bagholderBets =
 	"https://baijiahao.baidu.com/s?id=1740409748077610412&wfr=spider&for=pc";

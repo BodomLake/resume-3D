@@ -179,6 +179,7 @@ export let galaxyMaterial = null;
 export let galaxyPoints = null;
 
 export const generateGalaxy = () => {
+  // 自拟定的一些参数
   const parameters = {};
   parameters.count = 50000;
   parameters.size = 0.005;
@@ -259,8 +260,25 @@ export const generateGalaxy = () => {
     // Scale
     scales[i] = Math.random();
   }
-
+  /**
+   * // default vertex attributes provided by Geometry and BufferGeometry
+        attribute vec3 position;
+        attribute vec3 normal;
+        attribute vec2 uv;
+   */
+  // 重置了 position
   geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  // 新增了 color aScale aRandomness 三个 attributes
+  /**
+    # if defined( USE_COLOR_ALPHA )
+      // vertex color attribute with alpha
+      attribute vec4 color;
+    # elif defined( USE_COLOR  )
+      // vertex color attribute
+      attribute vec3 color;
+    # endif
+   */
+  
   geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
   geometry.setAttribute('aScale', new THREE.BufferAttribute(scales, 1));
   geometry.setAttribute(
@@ -294,6 +312,7 @@ export const generateGalaxy = () => {
 };
 
 export function moveParticles() {
+  // 绕着z轴旋转
   particleSystemObject.rotation.z += 0.0003;
   lensFlareObject.rotation.z += 0.0002;
   if (lensFlareObject.position.x < 750) {
