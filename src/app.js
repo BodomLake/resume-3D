@@ -431,8 +431,8 @@ Ammo().then((Ammo) => {
 		cursorHoverObjects.push(linkBox);
 	}
 
-	//create Ammo.js body to add solid mass to "Ryan Floyd Software Engineer"
-	function ryanFloydWords(x, y, z) {
+	//create Ammo.js body to add solid mass to "BodomLake Software Engineer"
+	function bodomLakeWords(x, y, z) {
 		const boxScale = { x: 46, y: 3, z: 2 };
 		let quat = { x: 0, y: 0, z: 0, w: 1 };
 		let mass = 0; //mass of zero = infinite mass
@@ -1084,7 +1084,7 @@ Ammo().then((Ammo) => {
 			Math.PI * 0.15
 		);
 
-		ryanFloydWords(11.2, 1, -20);
+		bodomLakeWords(11.2, 1, -20);
 		createTextOnPlane(-70, 0.01, -48, inputText.terpSolutionsText, 20, 40);
 		createTextOnPlane(-42, 0.01, -53, inputText.bagholderBetsText, 20, 40);
 		createTextOnPlane(-14, 0.01, -49, inputText.homeSweetHomeText, 20, 40);
